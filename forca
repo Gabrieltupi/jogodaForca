@@ -1,0 +1,33 @@
+package arrayss;
+
+import java.util.Scanner;
+
+public class Arrayss {
+    public static String  metod(String original, String paraguai){
+            char[] aqui2;
+            char[] entro2;
+            aqui2= original.toCharArray();
+            entro2= paraguai.toCharArray();
+            
+            int porc=0;
+            for (int j=0;j<aqui2.length;j++){
+                if (aqui2[j]==entro2[j]){
+                    porc=porc+20; 
+                }   
+            }
+            String resp= "voce tentou '"+ paraguai+"' e acertou "+porc+"%, a palavra certa e '"+original+"'.";
+            
+    return resp;
+    }
+    
+            public static void main(String[] args) {
+                Scanner tec= new Scanner (System.in);
+                String essa = "muose";
+                System.out.println("a palavra a ser adivinhada tem 5 letras");
+                String xama= tec.next();
+                
+                System.out.println(metod(essa,xama));
+                
+            }
+    
+}
